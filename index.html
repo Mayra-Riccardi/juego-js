@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <title>QUÉ NÚMERO ES?</title>
+</head>
+<body id="confeti-canvas">
+    <section id="OcultarContenedor" class="Contenedor_1">
+        <div class="ContenedorTituloyImagen">
+            <h1 id="titulo" data-aos="zoom-in-up">Adivina el Número</h1>
+            <div id="aclaraciones"  data-aos="flip-up">
+                <h3>Instruciones:</h3>
+                <p>Deberás adivinar el número que autogenera la aplicación.<br> Pista, es entre 1 y 15.<br>
+                   El juego nos va a calcular un puntaje y nos va a marcar cual fue el puntaje más alto que obtuvimos en cada ronda.<br>
+                   Si adivinamos el número ganamos, si no adivinamos podemos volver a intentar y si nuestro puntaje llega a 0 perdemos.<br>
+                   No te preocupes, te daremos pistas para que puedas ganar. Estás listo???</p>
+        </div>
+    </div>
+        <h3 class="titulo_principal" data-aos="zoom-in">Ingresá tu Nombre</h3> 
+        <div id="formulario" data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500">
+            <input type="text" id="nombre" placeholder="Ingrese su nombre.." />
+            <button type="button" class="nes-btn is-primary" onclick="ValidarNombre()">Continuar</button>
+        </div>
+    </section>
+    
+    <div id="fondo"></div>
+    <section id="juego" class="panel hidden">
+            <h1 id="titulo">Hola, <span id="nombreJugador"></span>!</h1>
+            <div id="aclaraciones">
+            <p id="mensaje" style="color: #039003;"></p>
+            </div>
+            <p style="margin-top: 50px;">Elegí un número entre 1 y 15:</p>
+            <input type="number" id="numeroElegido" min="1" max="15">
+            <button id="adivinar">Adivinar</button>
+            <p style="color: green;">Tu puntaje actual: <span id="puntaje"></span></p>
+            <p style="color: red;">Intentos Restantes: <span id="intentos-restantes"></span></p>
+            <p>Highscore: <span id="highscore"></span></p>
+            <button id="reiniciar">Reiniciar Juego</button>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/index.js"></script>
+  
+</body>
+</html>
